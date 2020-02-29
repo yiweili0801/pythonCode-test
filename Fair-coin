@@ -1,0 +1,8 @@
+import scipy.stats as sp
+
+def compute_prob(nTrails,numObserved):
+    p = 0.5  # known it's a fair coin
+    binomial = sp.binom(nTrails, p) #assign the distribution
+    result = binomial.pmf(numObserved)
+    print("If we toss a fair coin",nTrails,'times, the probability that it shows',numObserved,'heads is',result)
+    return
